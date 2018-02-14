@@ -1,0 +1,67 @@
+<p>
+    <mat-card>
+        <mat-card-content>
+<mat-form-field>
+    
+    <input matInput type="text" [(ngModel)]="expression" placeholder="wyrażenie języka Latex" [formControl]="expressionControl">
+    <mat-error *ngIf="expressionControl.hasError('required')">
+      Wyrażenie nie może być puste!
+    </mat-error>
+    <mat-error *ngIf="expressionControl.hasError('pattern')">
+      Wyrażenie błędne! <mat-icon matTooltip="Parametry funkcji powinny być podane w (), oraz oddzielone przecinkiem. 
+                                              Poprawne wyrażenie: e(m,c)=mc^2 Niepoprawne wyrażenie: e=mc^2">info</mat-icon>
+    </mat-error>
+  
+    
+    <button mat-button *ngIf="expression" matSuffix mat-icon-button aria-label="Clear" (click)="expression=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="methodName" placeholder="nazwa metody" [formControl]="methodNameControl">
+    <mat-error *ngIf="methodNameControl.hasError('required')">
+      Nazwa metody nie może być pusta!
+    </mat-error>
+
+    <button mat-button *ngIf="methodName" matSuffix mat-icon-button aria-label="Clear" (click)="methodName=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+      <mat-select  placeholder="modyfikator dostepu" [(value)]="selectedAccessModifier">
+          <mat-option *ngFor="let accessModifier of accessModifiers" [value]="accessModifier.value">
+              {{ accessModifier.value }}
+            </mat-option>
+        </mat-select>
+        
+  </mat-form-field> <br>
+
+  <button mat-fab color="primary" (click)="generateMethod()" [disabled]="!isValidForm()"><mat-icon >arrow_downward</mat-icon></button><br/>
+
+  
+  </mat-card-content>
+  </mat-card>
+</p>
+ 
+
+<p>
+    <mat-card>
+        <mat-card-content>
+            <mat-form-field >
+                <textarea id="resultTextArea" matInput type="text" matTextareaAutosize [(ngModel)]="result" readonly></textarea>
+            </mat-form-field>
+            <button mat-icon-button ngxClipboard [cbContent]="result"><mat-icon>content_copy</mat-icon></button>
+  </mat-card-content>
+  </mat-card>
+</p>
+ 
+    
+  
+
+
+
+  
+
+

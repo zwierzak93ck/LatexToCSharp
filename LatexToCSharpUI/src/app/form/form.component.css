@@ -1,0 +1,19 @@
+.example-form-field {
+  width: 200px;
+}
+
+#resultTextArea {
+  min-width: 1450px;
+  width: auto;
+  min-height: 100px;
+  height: auto;
+  word-wrap: normal;
+}
+
+input {
+  display: block;
+}
+
+mat-select {
+  display: block;
+}

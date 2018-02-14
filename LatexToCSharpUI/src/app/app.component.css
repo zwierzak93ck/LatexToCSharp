@@ -1,0 +1,11 @@
+span {
+    margin: 0 auto;
+    font-size: 30px;
+    font-style: oblique;
+    color: blanchedalmond;
+}
+
+mat-toolbar {
+    border: 2px solid;
+    border-radius: 5px;
+}
