@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "d:\\Studia\\Projekty\\Magisterka\\Rok1\\Semestr2\\ProgramowanieImperatywneObiektoweIDeklaratywne\\Projekt2\\LatexToCSharp\\pioid_projekt2\\LatexToCSharpWebApi\\LatexToCSharpWebApi.csproj",
+  "TargetFramework": "netcoreapp2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.0",
+    "LanguageVersion": "2.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.0"
+      }
+    ]
+  }
+}
